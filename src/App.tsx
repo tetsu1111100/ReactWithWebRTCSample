@@ -5,6 +5,7 @@ import Camera from './webrtc/Camera'
 import Microphone from './webrtc/Microphone'
 import Canvas from './webrtc/Canvas'
 import ScreenSharing from './webrtc/ScreenShare'
+import Resolution from './webrtc/Resolution'
 
 
 function App() {  
@@ -16,6 +17,7 @@ function App() {
         <Microphone />
         <Canvas />
         <ScreenSharing />
+        <Resolution />
       </div>    
     </div>
   )
