@@ -4,6 +4,7 @@ import './App.css'
 import Camera from './webrtc/Camera'
 import Microphone from './webrtc/Microphone'
 import Canvas from './webrtc/Canvas'
+import ScreenSharing from './webrtc/ScreenShare'
 
 
 function App() {  
@@ -14,6 +15,7 @@ function App() {
         <Camera />  
         <Microphone />
         <Canvas />
+        <ScreenSharing />
       </div>    
     </div>
   )

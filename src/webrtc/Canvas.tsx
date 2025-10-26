@@ -21,7 +21,7 @@ const Canvas:React.FC = ()=>{
 		}
 	}
 	
-	const takSnap = async (e?: React.MouseEvent) =>{
+	const takSnap = async () =>{
 		if (!videoRef.current || !canvasRef.current) return;
 		const video = videoRef.current;
 		const canvas = canvasRef.current;
