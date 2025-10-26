@@ -37,9 +37,9 @@ const Microphone:React.FC = ()=>{
 	}
 	
 	return (
-		<div className=" flex flex-col items-center justify-center p-10 ">
-			<audio className="video bg-gray-500 rounded-xl " ref={audioRef} controls autoPlay></audio>
-			<div className="  m-2 p-2 bg-gray-600 text-white rounded-xl w-48 text-center cursor-pointer hover:scale-105 " onClick={openMicrophone}>開啟麥克風</div>
+		<div className=" flex flex-col items-center justify-center p-10 bg-gray-400 rounded-xl ">
+			<audio className="audio  " ref={audioRef} controls autoPlay></audio>
+			<div className="  m-2 p-2 bg-gray-100 text-gray-600 rounded-xl w-48 text-center cursor-pointer hover:scale-105 " onClick={openMicrophone}>開啟麥克風</div>
 		</div>
 	)
 }
