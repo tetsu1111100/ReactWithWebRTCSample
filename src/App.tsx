@@ -2,6 +2,7 @@
 import './App.css'
 
 import Camera from './webrtc/Camera'
+import Microphone from './webrtc/Microphone'
 
 function App() {  
 
@@ -9,6 +10,7 @@ function App() {
     <div className=" bg-black h-screen w-screen">
       <div className="flex flex-col items-center justify-center bg-gray-900">
         <Camera />  
+        <Microphone />
       </div>    
     </div>
   )
