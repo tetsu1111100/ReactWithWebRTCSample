@@ -1,12 +1,16 @@
-import { useState } from 'react'
+
 import './App.css'
+
+import Camera from './webrtc/Camera'
 
 function App() {  
 
   return (
-    <>
-      <h1 className="text-3xl font-bold underline text-red-400">Hello world!</h1>
-    </>
+    <div className=" bg-black h-screen w-screen">
+      <div className="flex flex-col items-center justify-center bg-gray-900">
+        <Camera />  
+      </div>    
+    </div>
   )
 }
 
