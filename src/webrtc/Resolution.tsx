@@ -118,7 +118,20 @@ const Resolution:React.FC = ()=>{
 				break;
 		}
 	}
-				
+	
+
+    const dynamicChange = () =>{
+        const track = stream?.getVideoTracks()[0];
+        track?.applyConstraints(vgaConstraints.video as MediaTrackConstraints)
+            .then(()=>{
+                console.log('動態變更分辨率成功。')
+            })
+            .catch((e)=>{
+                console.log("動態變更分辨率失敗。", e)
+            });
+    }
+
+
 	return (
 		<div className=" flex flex-col items-center justify-center p-10 bg-gray-100 rounded-xl ">
 			<video className="video bg-gray-500 rounded-xl" ref={videoRef} autoPlay playsInline></video>
@@ -131,6 +144,7 @@ const Resolution:React.FC = ()=>{
                 <button className=" m-2 p-2 bg-gray-600 text-white rounded-xl w-24 text-center cursor-pointer hover:scale-105 " onClick={()=>handleChange('4k')}>4096x2160</button>
                 <button className=" m-2 p-2 bg-gray-600 text-white rounded-xl w-24 text-center cursor-pointer hover:scale-105 " onClick={()=>handleChange('8k')}>7680x4320</button>
             </div>
+            <div className="  m-2 p-2 bg-gray-600 text-white rounded-xl w-48 text-center cursor-pointer hover:scale-105 " onClick={dynamicChange}>動態變更為640x480</div>
 		</div>
 	)
 }
